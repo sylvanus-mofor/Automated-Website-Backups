@@ -10,9 +10,9 @@ variable "bucket_name" {
 
 variable "tags" {
   type        = map(string)
-  description = "Tags for bucket"
+  description = "Tags for the s3 bucket"
   default = {
-    Name = "Unamed" 
+    Name = "project-name" 
     Freq = "Weekly"
   }
 }

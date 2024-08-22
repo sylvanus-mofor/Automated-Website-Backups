@@ -5,17 +5,17 @@ provider "aws" {
 
 module "s3" {
   source       = "./s3"
-  bucket_name  = "sylva"
-  project_name = "sylva"
+  bucket_name  = "project-name-backups"
+  project_name = "project-name"
   tags = {
-    "Name" = "sylva"
+    "Name" = "project-name"
     "Freq" = "Weekly"
   }
 }
 
 module "iam" {
   source       = "./iam"
-  project_name = "sylva"
+  project_name = "project-name"
 }
 
 output "bucket_name" {

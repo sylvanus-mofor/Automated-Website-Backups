@@ -1,10 +1,6 @@
-# provider "aws" {
-#   region = "us-east-1"
-# }
-
 variable "project_name" {
   type    = string
-  default = "unamed-prj"
+  default = "project-name"
 }
 
 resource "aws_iam_user" "user" {
@@ -23,11 +19,12 @@ resource "aws_iam_policy" "iam_policy" {
           "s3:GetObject",
           "s3:PutObject",
           "s3:ListBucket",
-          "s3:ListObject",
           "s3:DeleteObject",
           "s3:DeleteBucket"
         ]
-        Resource = "arn:aws:s3:::${var.project_name}/*"
+        Resource = ["arn:aws:s3:::${var.project_name}-backups/*",
+          "arn:aws:s3:::${var.project_name}-backups"
+        ]
       }
     ]
   })
