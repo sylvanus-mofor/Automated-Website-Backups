@@ -3,13 +3,13 @@ name: Greetings
 on:
   push:
     branches:
-      - main # Specify the branch you want to trigger the action on (e.g., 'main')
-  pull_request_target:
+      - master # Specify the branch you want to trigger the action on (e.g., 'main')
+  pull_request:
   issues:
 
 jobs:
   greeting:
-    runs-on: linux-latest
+    runs-on: ubuntu-latest
     permissions:
       issues: write
       pull-requests: write
