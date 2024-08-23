@@ -16,6 +16,6 @@ jobs:
     steps:
     - uses: actions/first-interaction@v1
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        repo-token: ${{ secrets.GREETINGS_TOKEN }}
         issue-message: "Thanks for raising this issue. I will look at it as soon as possible"
         pr-message: "Thanks for raising this pr. I will take a look and merge it asap"
