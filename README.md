@@ -27,3 +27,5 @@ This creates <br>
 
 Use the access key, secret key and bucket arn to give permission to the back-up/Restore plugin such as UpDraftPlus.<br>
  running ```terraform destroy -auto-approve``` will destroy the whole infrastructure.<br>
+
+ Please note that outputting secrets in terrafom is not best practice as it persists in plain text on the TFState.yml file
