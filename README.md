@@ -16,7 +16,6 @@ This creates <br>
   -iam policy that gives the following s3 permissions:<br>
                 "GetObject",<br>
                 "PutObject",<br>
-                "ListBucket",<br>
                 "ListObject",<br>
                 "DeleteBucket",<br>
                 "DeleteObject"<br>
